@@ -286,80 +286,64 @@ export default function Home() {
         {/* start article content */}
 
         <div className="h-full bg-white">
-          <Article
-            header={[
-              {
-                label: "บทความเกี่ยวกับสุขภาพ"
-              }
-            ]}
-            items={[
-              {
-                header: "บทความทางการแพทย์",
-                label: [
-                  {
-                    label: "Care",
-                  },
-                  {
-                    label: "General",
-                  }
-                ],
-                title: "สิ่งที่คุณควรรู้ก่อนการส่องกล้องช่องท้องส่วนบน",
-                text: "หากคุณมีอาการปวดท้องส่วนบนอย่างต่อเนื่องตลอดจนความผิดปกติอื่น ๆ ในระบบทางเดินอาหาร คุณจะต้องเข้ารับการตรวจส่องกล้องส่วนบนเพื่อพิจารณาประเมิน และรักษาปัญหาของคุณตั้งแต่ระยะเริ่มแรก เพื่อให้คุณฟื้นฟูคุณภาพชีวิตได้ทันที",
-                children: [
-                  {
-                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
-                    avatarName: "Dr. Prapat Samitisatian",
-                    yearOfAvatar: "22 Jun 2024",
-                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_4_d4280ca512/update_branch_4_d4280ca512.png"
-                  },
-                  {
-                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_aiony_haust_90d0fadf62/update_aiony_haust_90d0fadf62.jpg",
-                    avatarName: "Dr. Jenifer Walker",
-                    yearOfAvatar: "20 Jun 2024",
-                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_chumpon_1a86549cf3/update_branch_chumpon_1a86549cf3.jpg"
-                  },
-                  {
-                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
-                    avatarName: "20 Jun 2024",
-                    yearOfAvatar: "Dr.Prapat Samitisatian",
-                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_team_medical_personal_f8503fb116/update_team_medical_personal_f8503fb116.png",
-                  }
-                ],
-              },
-              {
-                header: "ทั่วไป",
-                label: [
-                  {
-                    label: "Care",
-                  },
-                  {
-                    label: "General",
-                  }
-                ],
-                title: "สิ่งที่คุณควรรู้ก่อนการส่องกล้องช่องท้องส่วนบน",
-                text: "หากคุณมีอาการปวดท้องส่วนบนอย่างต่อเนื่องตลอดจนความผิดปกติอื่น ๆ ในระบบทางเดินอาหาร คุณจะต้องเข้ารับการตรวจส่องกล้องส่วนบนเพื่อพิจารณาประเมิน และรักษาปัญหาของคุณตั้งแต่ระยะเริ่มแรก เพื่อให้คุณฟื้นฟูคุณภาพชีวิตได้ทันที",
-                children: [
-                  {
-                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
-                    avatarName: "20 Jun 2024",
-                    yearOfAvatar: "Dr.Prapat Samitisatian",
-                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_team_medical_personal_f8503fb116/update_team_medical_personal_f8503fb116.png",
-                  },
-                  {
-                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
-                    avatarName: "Dr. Prapat Samitisatian",
-                    yearOfAvatar: "22 Jun 2024",
-                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_4_d4280ca512/update_branch_4_d4280ca512.png"
-                  },
-                  {
-                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_aiony_haust_90d0fadf62/update_aiony_haust_90d0fadf62.jpg",
-                    avatarName: "Dr. Jenifer Walker",
-                    yearOfAvatar: "20 Jun 2024",
-                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_chumpon_1a86549cf3/update_branch_chumpon_1a86549cf3.jpg"
-                  }
-                ]
-              },
-            ]} />
+          <div className="ml-[4.5rem] mr-[4.5rem] max-w-[110rem]">
+            <div className="flex flex-col gap-[3rem]">
+              <div className="font-helvethaica-bd text-[3.5rem]">บทความเกี่ยวกับสุขภาพ</div>
+              <div className="grid grid-cols-2 max-md:grid-cols-1 gap-[1.5rem]">
+                <div>
+                  <Article items={
+                    [
+                      {
+                        "carouselURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_4_d4280ca512/update_branch_4_d4280ca512.png",
+                        "avatarURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
+                        "yearInAvatar": "22 Jun 2024",
+                        "avatarName": "Dr. Prapat Samitisatian",
+                      },
+                      {
+                        "carouselURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_chumpon_1a86549cf3/update_branch_chumpon_1a86549cf3.jpg",
+                        "avatarURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_aiony_haust_90d0fadf62/update_aiony_haust_90d0fadf62.jpg",
+                        "yearInAvatar": "20 Jun 2024",
+                        "avatarName": "Dr. Jenifer Walker",
+                      },
+                      {
+                        "carouselURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_team_medical_personal_f8503fb116/update_team_medical_personal_f8503fb116.png",
+                        "avatarURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
+                        "yearInAvatar": "20 Jun 2024",
+                        "avatarName": "Dr. Prapat Samitisatian",
+                      }
+                    ]
+                  } />
+                </div>
+                <div>
+                  <Article items={[
+                    {
+                      "carouselURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_team_medical_personal_f8503fb116/update_team_medical_personal_f8503fb116.png",
+                      "avatarURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
+                      "yearInAvatar": "20 Jun 2024",
+                      "avatarName": "Dr. Prapat Samitisatian",
+                    },
+                    {
+                      "carouselURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_4_d4280ca512/update_branch_4_d4280ca512.png",
+                      "avatarURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
+                      "yearInAvatar": "22 Jun 2024",
+                      "avatarName": "Dr. Prapat Samitisatian",
+                    },
+                    {
+                      "carouselURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_chumpon_1a86549cf3/update_branch_chumpon_1a86549cf3.jpg",
+                      "avatarURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_aiony_haust_90d0fadf62/update_aiony_haust_90d0fadf62.jpg",
+                      "yearInAvatar": "20 Jun 2024",
+                      "avatarName": "Dr. Jenifer Walker",
+                    }
+                  ]} />
+                </div>
+              </div>
+              <div className="font-helvethaica-bd text-[1.5rem] pb-[4rem] w-fit">
+                <div className="border py-[0.3rem] px-[1.5rem] rounded-full">
+                  ดูบทความทั้งหมด
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* end of article content */}
@@ -375,11 +359,11 @@ export default function Home() {
             {
               url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_N_Health_White_7944d37805/thumbnail_update_N_Health_White_7944d37805.png",
               children: [
-                { 
-                  label:"บริษัท เนชั่นแนล เฮลท์แคร์ ซิสเท็มส์ จำกัด",
+                {
+                  label: "บริษัท เนชั่นแนล เฮลท์แคร์ ซิสเท็มส์ จำกัด",
                 },
                 {
-                  label:"2301/2 ถนนเพชรบุรีตัดใหม่ แขวงบางกะปิ เขตห้วยขวาง กรุงเทพมหานคร 10310"
+                  label: "2301/2 ถนนเพชรบุรีตัดใหม่ แขวงบางกะปิ เขตห้วยขวาง กรุงเทพมหานคร 10310"
                 }
               ]
             },

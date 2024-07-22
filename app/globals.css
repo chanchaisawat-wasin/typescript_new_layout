@@ -27,7 +27,7 @@
 /* start css body */
 
 body {
-  background: linear-gradient(to top ,#fff, 80%, #ddf2ff);
+  background: linear-gradient(to top, #fff, 80%, #ddf2ff);
 }
 
 /* end css body */
@@ -203,3 +203,35 @@ nav {
 }
 
 /* end of css health program */
+
+/* start css article */
+
+.carousel-duration-bar {
+  background-color: rgb(71, 85, 105);
+  width: fit-content;
+  height: 5px;
+  animation-name: progress;
+  /* animation-delay: ; */
+  animation-duration: 8000ms;
+  animation-iteration-count: 1;
+  border-radius: 9999px;
+}
+
+@keyframes progress {
+  0% {
+    width: 0px;
+    background-color: white;
+  }
+
+  100% {
+    width: 100%;
+    background-color: white;
+  }
+}
+
+.grid-apw {
+  display: grid;
+  grid-template-columns: 60px auto;
+}
+
+/* end of css article */
