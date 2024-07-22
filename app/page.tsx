@@ -5,6 +5,8 @@ import Vision from './components/vision';
 import Award from './components/award';
 import Recommend from './components/recommend';
 import Health from './components/health';
+import Article from './components/article';
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -235,52 +237,231 @@ export default function Home() {
           <Health
             items={[{
               label: "ค้นหาโปรแกรมตรวจสุขภาพ"
-            },
-            {
-              card: [
-                {
-                  label: "โปรแกรมสุขภาพทั่วไป",
-                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_heart_8b1060b1aa/thumbnail_update_heart_8b1060b1aa.png",
-                  css: "bg-[#FDEAEB]"
-                },
-                {
-                  label: "โปรแกรมพันธุกรรม",
-                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_genetic_checks_72b53d3ed5/thumbnail_update_genetic_checks_72b53d3ed5.png",
-                  css: "bg-[#EAF2EB]"
-                },
-                {
-                  label: "โปรแกรมสุขภาพสำหรับผู้ชาย",
-                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_men_health_99542b71c9/thumbnail_update_men_health_99542b71c9.png",
-                  css: "bg-[#E6EBF4]"
-                },
-                {
-                  label: "โปรแกรมโภชนาการ",
-                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_hamburger_b09866dc58/thumbnail_update_hamburger_b09866dc58.png",
-                  css: "bg-[#FDEEE6]"
-                },
-                {
-                  label: "โปรแกรมตรวจสุขภาพสำหรับผู้หญิง",
-                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_women_health_158bc86b63/thumbnail_update_women_health_158bc86b63.png",
-                  css: "bg-[#F1F5F9]"
-                },
-                {
-                  label: "โปรแกรมตรวจสุขภาพทั้งหมด",
-                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_all_health_cehck_2cf450ff5a/thumbnail_update_all_health_cehck_2cf450ff5a.png",
-                  css: "bg-[#FFF9EA]"
-                }
-              ]
-            }
+            }]}
+            card={[
+              {
+                label: "โปรแกรมสุขภาพทั่วไป",
+                url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_heart_8b1060b1aa/thumbnail_update_heart_8b1060b1aa.png",
+                css: "bg-[#FDEAEB]"
+              },
+              {
+                label: "โปรแกรมพันธุกรรม",
+                url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_genetic_checks_72b53d3ed5/thumbnail_update_genetic_checks_72b53d3ed5.png",
+                css: "bg-[#EAF2EB]"
+              },
+              {
+                label: "โปรแกรมสุขภาพสำหรับผู้ชาย",
+                url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_men_health_99542b71c9/thumbnail_update_men_health_99542b71c9.png",
+                css: "bg-[#E6EBF4]"
+              },
+              {
+                label: "โปรแกรมโภชนาการ",
+                url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_hamburger_b09866dc58/thumbnail_update_hamburger_b09866dc58.png",
+                css: "bg-[#FDEEE6]"
+              },
+              {
+                label: "โปรแกรมตรวจสุขภาพสำหรับผู้หญิง",
+                url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_women_health_158bc86b63/thumbnail_update_women_health_158bc86b63.png",
+                css: "bg-[#F1F5F9]"
+              },
+              {
+                label: "โปรแกรมตรวจสุขภาพทั้งหมด",
+                url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_all_health_cehck_2cf450ff5a/thumbnail_update_all_health_cehck_2cf450ff5a.png",
+                css: "bg-[#FFF9EA]"
+              }
+            ]}
+            lastLabel={[
+              {
+                label: "โปรแกรมตรวจสุขภาพทั้งหมด",
+              },
             ]} />
         </div>
 
         {/* end of health program */}
+
+        {/* start review content */}
+
+        {/* end of review content */}
+
+        {/* start article content */}
+
+        <div className="h-full bg-white">
+          <Article
+            header={[
+              {
+                label: "บทความเกี่ยวกับสุขภาพ"
+              }
+            ]}
+            items={[
+              {
+                header: "บทความทางการแพทย์",
+                label: [
+                  {
+                    label: "Care",
+                  },
+                  {
+                    label: "General",
+                  }
+                ],
+                title: "สิ่งที่คุณควรรู้ก่อนการส่องกล้องช่องท้องส่วนบน",
+                text: "หากคุณมีอาการปวดท้องส่วนบนอย่างต่อเนื่องตลอดจนความผิดปกติอื่น ๆ ในระบบทางเดินอาหาร คุณจะต้องเข้ารับการตรวจส่องกล้องส่วนบนเพื่อพิจารณาประเมิน และรักษาปัญหาของคุณตั้งแต่ระยะเริ่มแรก เพื่อให้คุณฟื้นฟูคุณภาพชีวิตได้ทันที",
+                children: [
+                  {
+                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
+                    avatarName: "Dr. Prapat Samitisatian",
+                    yearOfAvatar: "22 Jun 2024",
+                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_4_d4280ca512/update_branch_4_d4280ca512.png"
+                  },
+                  {
+                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_aiony_haust_90d0fadf62/update_aiony_haust_90d0fadf62.jpg",
+                    avatarName: "Dr. Jenifer Walker",
+                    yearOfAvatar: "20 Jun 2024",
+                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_chumpon_1a86549cf3/update_branch_chumpon_1a86549cf3.jpg"
+                  },
+                  {
+                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
+                    avatarName: "20 Jun 2024",
+                    yearOfAvatar: "Dr.Prapat Samitisatian",
+                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_team_medical_personal_f8503fb116/update_team_medical_personal_f8503fb116.png",
+                  }
+                ],
+              },
+              {
+                header: "ทั่วไป",
+                label: [
+                  {
+                    label: "Care",
+                  },
+                  {
+                    label: "General",
+                  }
+                ],
+                title: "สิ่งที่คุณควรรู้ก่อนการส่องกล้องช่องท้องส่วนบน",
+                text: "หากคุณมีอาการปวดท้องส่วนบนอย่างต่อเนื่องตลอดจนความผิดปกติอื่น ๆ ในระบบทางเดินอาหาร คุณจะต้องเข้ารับการตรวจส่องกล้องส่วนบนเพื่อพิจารณาประเมิน และรักษาปัญหาของคุณตั้งแต่ระยะเริ่มแรก เพื่อให้คุณฟื้นฟูคุณภาพชีวิตได้ทันที",
+                children: [
+                  {
+                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
+                    avatarName: "20 Jun 2024",
+                    yearOfAvatar: "Dr.Prapat Samitisatian",
+                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_team_medical_personal_f8503fb116/update_team_medical_personal_f8503fb116.png",
+                  },
+                  {
+                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_christopher_campbell_44eda4ee90/update_christopher_campbell_44eda4ee90.jpg",
+                    avatarName: "Dr. Prapat Samitisatian",
+                    yearOfAvatar: "22 Jun 2024",
+                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_4_d4280ca512/update_branch_4_d4280ca512.png"
+                  },
+                  {
+                    avatarURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_aiony_haust_90d0fadf62/update_aiony_haust_90d0fadf62.jpg",
+                    avatarName: "Dr. Jenifer Walker",
+                    yearOfAvatar: "20 Jun 2024",
+                    imgURL: "https://storage.googleapis.com/nh-uat-corp/2024/6/update_branch_chumpon_1a86549cf3/update_branch_chumpon_1a86549cf3.jpg"
+                  }
+                ]
+              },
+            ]} />
+        </div>
+
+        {/* end of article content */}
 
       </div>
 
       {/* end main content */}
 
       {/* start footer */}
-      <div></div>
+      <div className="h-full bg-[#00338d]">
+        <Footer
+          items={[
+            {
+              url: "https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_N_Health_White_7944d37805/thumbnail_update_N_Health_White_7944d37805.png",
+              children: [
+                { 
+                  label:"บริษัท เนชั่นแนล เฮลท์แคร์ ซิสเท็มส์ จำกัด",
+                },
+                {
+                  label:"2301/2 ถนนเพชรบุรีตัดใหม่ แขวงบางกะปิ เขตห้วยขวาง กรุงเทพมหานคร 10310"
+                }
+              ]
+            },
+            {
+              label: "แพ็กเกจ และโปรโมชั่น",
+              children: [
+                {
+                  label: "โปรแกรมตรวจสุขภาพทั่วไป",
+                  url: "#"
+                },
+                {
+                  label: "โปรแกรมตรวจสุขภาพสำหรับผู้หญิง",
+                  url: "#"
+                },
+                {
+                  label: "โปรแกรมตรวจสุขภาพสำหรับผู้ชาย",
+                  url: "#"
+                },
+                {
+                  label: "โปรแกรมตรวจพันธุกรรม",
+                  url: "#"
+                },
+                {
+                  label: "โปรแกรมตรวจโภชนาการ",
+                  url: "#"
+                },
+
+              ]
+            },
+            {
+              label: "บริการของเรา",
+              children: [
+                {
+                  label: "ภาพรวมบริษัท",
+                  url: "#"
+                },
+                {
+                  label: "การบริการ",
+                  url: "#"
+                },
+              ]
+            },
+            {
+              label: "บริษัท",
+              children: [
+                {
+                  label: "เกี่ยวกับเรา",
+                  url: "#"
+                },
+                {
+                  label: "บทความ",
+                  url: "#"
+                },
+                {
+                  label: "ข่าวสาร และกิจกรรม",
+                  url: "#"
+                },
+                {
+                  label: "ติดต่อเรา",
+                  url: "#"
+                }
+              ]
+            },
+            {
+              label: "นโยบายความเป็นส่วนตัว",
+              children: [
+                {
+                  label: "เงื่อนไขการขอข้อมูล",
+                  url: "#"
+                },
+                {
+                  label: "นโยบายความเป็นส่วนตัว",
+                  url: "#"
+                },
+                {
+                  label: "นโยบายคุกกี้",
+                  url: "#"
+                }
+              ]
+            },
+          ]} />
+      </div>
       {/* end footer */}
     </>
   );
