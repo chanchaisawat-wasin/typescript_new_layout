@@ -99,10 +99,6 @@ nav {
   z-index: 1;
 }
 
-.icon {
-  z-index: 2;
-}
-
 .mid-nav.close {
   transition: all 0.5s ease-in-out;
 }
@@ -111,9 +107,7 @@ nav {
   display: flex;
   backdrop-filter: blur(4px);
   background-color: rgba(255, 255, 255, 0.7);
-  padding-top: 0.4rem;
-  padding-left: 1.3rem;
-  padding-right: 1.3rem;
+
   gap: 2.5rem;
   border-top-left-radius: 9999px;
   border-top-right-radius: 9999px;
@@ -186,20 +180,20 @@ nav {
 
 /* start css health program */
 
-.grid-masonry {
+.health {
   width: 100%;
   columns: 3;
 }
 
-.grid-fill {
-  height: 20rem;
+.card-health {
+  height: 10rem;
   width: 100%;
 }
 
-.grid-masonry .grid-fill:nth-child(2),
-.grid-fill:nth-child(3),
-.grid-fill:nth-child(6) {
-  height: 30rem;
+.card-health:nth-child(2),
+.card-health:nth-child(3),
+.card-health:nth-child(6) {
+  height: 20rem;
 }
 
 /* end of css health program */
@@ -229,9 +223,9 @@ nav {
   }
 }
 
-.grid-apw {
+/* .grid-apw {
   display: grid;
   grid-template-columns: 60px auto;
-}
+} */
 
 /* end of css article */

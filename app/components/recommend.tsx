@@ -20,10 +20,7 @@ const Recommend = (props: RecommendComponentProps) => {
     const items = props.items ?? [];
 
     return (
-        <div className="min-[1441px]:max-w-[84rem] min-[1441px]:text-[24px]
-            lg:text-[16px] lg:max-w-[56rem]
-            md:max-w-[47rem]
-            max-w-[42rem] mx-auto">
+        <div className="mx-auto px-6 py-6 max-w-screen-xl w-full">
             <div className="flex flex-col gap-[2rem]">
                 {items.map((val, i) => {
                     return (<>
@@ -41,7 +38,7 @@ const Recommend = (props: RecommendComponentProps) => {
                 })}
                 <div>
                     {items.map((val, i) => {
-                        return (<div className="grid grid-cols-3 gap-[2.2rem]">
+                        return (<div className="grid sm:grid-cols-3 grid-cols-1 gap-[2.2rem]">
                             {val.image?.map((val, i) => {
                                 return (<div className={`${i === 0 ? "col-span-2" : "col-1"} relative`}>
                                     <img className="object-cover h-full w-full rounded-2xl" src={val.url} alt="" />

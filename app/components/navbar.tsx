@@ -65,71 +65,70 @@ const Navbar = (props: NavbarComponentProps) => {
     }
 
     return (
-        <nav
-            /* default screen */
-            className="min-[1441px]:max-w-[84rem] min-[1441px]:text-[24px]
-            lg:text-[16px] lg:max-w-[56rem]
-            md:max-w-[47rem]
-            max-w-[42rem]">
-            <div
+        <div className="mx-auto py-2 max-w-screen-xl w-full">
+            <nav
                 /* default screen */
-                className={`${toggle ? 'logo-on-click' : ''} relative icon min-[1441px]:w-[10rem] xl:h-[3rem]  lg:w-[7rem] md:w-[6rem] w-[6rem]`}>
-                {img.map((val, i) => {
-                    return (
-                        <img src={val.logo}
-                            className=""
-                            alt="" />
-                    )
-                })}
-            </div>
-
-            <div className={`${toggle ? 'x-click' : ''} burgerIcon icon md:mt-[0.4rem] mt-[1rem]`} onClick={handleToggle}>
-                <div className="backdrop-blur-sm bg-white/70 rounded-full p-1">
-                    {toggle ? xIcon() : burgerIcon()}
+                className="">
+                <div
+                    /* default screen */
+                    className={`${toggle ? 'logo-on-click' : ''} z-[10] md:px-0 sm:px-10`}>
+                    {img.map((val, i) => {
+                        return (
+                            <img src={val.logo}
+                                className="w-full h-auto max-w-[9rem]"
+                                alt="" />
+                        )
+                    })}
                 </div>
-            </div>
 
-            {/* <div className={`${toggle ? 'open-nav' : ''}mt-[1.5rem]`}> */}
-            <div
-                /* default screen */
-                className={`flex backdrop-blur-sm bg-white/70 pt-[0.4rem] pr-[1.4rem] pl-[1.4rem] mid-nav min-[1441px]:mt-[1rem] lg:[0.8rem] min-[1441px]:gap-[2rem] lg:gap-[1.5rem] rounded-r-full rounded-l-full ${toggle ? 'nav-show' : ''} `}>
-                {items.map((val, i) => {
-                    return (
-                        <div className={`${i === 4 ? "dropdown" : ""}`}>
-                            {/* <div className=""> */}
-                            <a className="" href={val.url}>
-                                <div className={`font-helvethaica-bd hover:text-[#00338d] flex ${i === 4 ? "gap-[0.2rem]" : ""}`}>{val.label}
-                                    <div className="drop-icon">{i === 4 ? dropIcon() : ""}</div>
-                                </div>
-                            </a>
-                            {/* </div> */}
-                            <div className="">
-                                <div className={i === 4 ? "dropdown-menu backdrop-blur-sm bg-white/70 py-[0.5rem] px-[2rem] rounded-3xl" : ""}>
-                                    {val.children?.map((val, i) => {
-                                        return (
-                                            <a href={val.url}><div className="font-helvethaica hover:text-[#00338d] py-[0.5rem]">{val.label}</div></a>
-                                        )
-                                    })}
+                <div className={`${toggle ? 'x-click' : ''} burgerIcon z-[2]`} onClick={handleToggle}>
+                    <div className="backdrop-blur-sm bg-white/70 rounded-full p-1">
+                        {toggle ? xIcon() : burgerIcon()}
+                    </div>
+                </div>
+
+                {/* <div className={`${toggle ? 'open-nav' : ''}mt-[1.5rem]`}> */}
+                <div
+                    /* default screen */
+                    className={`flex min-[1441px]:pb-[0.5rem] lg:pb-[0.2rem] backdrop-blur-sm bg-white/70 pt-[0.4rem] pr-[1.4rem] pl-[1.4rem] mid-nav min-[1441px]:mt-[1rem] lg:[0.8rem] min-[1441px]:gap-[2rem] lg:gap-[1.5rem] rounded-r-full rounded-l-full ${toggle ? 'nav-show' : ''} `}>
+                    {items.map((val, i) => {
+                        return (
+                            <div className={`${i === 4 ? "dropdown" : ""}`}>
+                                {/* <div className=""> */}
+                                <a className="" href={val.url}>
+                                    <div className={`font-helvethaica-bd hover:text-[#00338d] flex ${i === 4 ? "gap-[0.2rem]" : ""}`}>{val.label}
+                                        <div className="drop-icon">{i === 4 ? dropIcon() : ""}</div>
+                                    </div>
+                                </a>
+                                {/* </div> */}
+                                <div className="">
+                                    <div className={i === 4 ? "dropdown-menu backdrop-blur-sm bg-white/70 py-[0.5rem] px-[2rem] rounded-3xl" : ""}>
+                                        {val.children?.map((val, i) => {
+                                            return (
+                                                <a href={val.url}><div className="font-helvethaica hover:text-[#00338d] py-[0.5rem]">{val.label}</div></a>
+                                            )
+                                        })}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                    )
-                })}
-            </div>
+                        )
+                    })}
+                </div>
 
-            <div className={`lg:flex hidden gap-10 backdrop-blur-sm bg-white/70 min-[1441px]:mt-[1rem] lg:mt-[0.8rem] pt-[0.5rem] pr-[1.5rem] pl-[1.5rem] rounded-full`}>
-                {language.map((val, i) => {
-                    return (
-                        <div className={`font-helvethaica-bd gap-3 ${i > 0 ? "hidden" : "flex"}`}>{val.label}{i === 0 ? dropIcon() : ""}</div>
-                    )
-                })}
-            </div>
-            {/* </div> */}
-
+                <div className={`lg:flex hidden backdrop-blur-sm bg-white/70 rounded-full`}>
+                    {language.map((val, i) => {
+                        return (
+                            <div className={`font-helvethaica-bd gap-2 ${i > 0 ? "hidden" : "flex"}`}>{val.label}{i === 0 ? dropIcon() : ""}</div>
+                        )
+                    })}
+                </div>
+                {/* </div> */}
 
 
-        </nav>
+
+            </nav>
+        </div >
     )
 
 }

@@ -18,11 +18,8 @@ const Award = (props: AwardComponentProps) => {
   const items = props.items ?? [];
 
   return (
-    <div className="min-[1441px]:max-w-[84rem] min-[1441px]:text-[24px]
-            lg:text-[16px] lg:max-w-[56rem]
-            md:max-w-[47rem]
-            max-w-[42rem] mx-auto">
-      <div className="flex items-center gap-[1.5rem]">
+    <div className="mx-auto px-6 py-6 max-w-screen-xl w-full">
+      <div className="flex sm:flex-row flex-col items-center gap-[1.5rem]">
         <div className="py-[2rem] pr-[2rem] border-r-[1px] h-full">
           {label.map((val, i) => {
             return (

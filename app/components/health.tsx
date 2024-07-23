@@ -21,34 +21,34 @@ const Health = (props: HealthComponentProps) => {
 
 
     return (
-        <div className="min-[1441px]:max-w-[84rem] min-[1441px]:text-[24px]
-        lg:text-[16px] lg:max-w-[56rem] font-helvethaica-bd
-        md:max-w-[47rem] max-w-[42rem] mx-auto py-[2rem] my-[2rem]">
+        <div className="mx-auto px-6 py-6 max-w-screen-xl w-full">
 
-            <div className="flex gap-[1rem]">
+            <div className="flex flex-col md:flex-row">
 
                 {items.map((val, i) => {
-                    return (<div className="font-helvethaica-bd text-[57px]">
+                    return (<div className="font-helvethaica-bd basis-1/4 text-[57px]">
                         {val.label}
                     </div>)
                 })}
 
 
-                <div className="grid-masonry gap-12">
-                    {card.map((val, i) => {
-                        return (
-                            <div className={`grid-fill rounded-3xl mb-12 ${val.css}`}>
-                                <a className="hover:text-[#00338d]" href="#">
-                                    <div className="flex flex-col justify-center items-center">
-                                        <div className={`mx-auto ${i === 1 || i === 2 || i === 5 ? "mt-16 mb-16" : "mt-8"}`}>
-                                            <img className={`mx-auto ${i === 1 || i === 2 || i === 5 ? "h-[220px]" : "h-[180px]"}`} src={val.url} alt="" />
+                <div className="basis-3/4">
+                    <div className="health gap-6">
+                        {card.map((val, i) => {
+                            return (
+                                <div className={`card-health rounded-3xl mb-12 ${val.css}`}>
+                                    <a className="hover:text-[#00338d]" href="#">
+                                        <div className="flex flex-col ">
+                                            <div className={i === 1 || i === 2 || i === 5 ? "mt-16 mb-16 mx-auto" : "mt-8 mx-auto"}>
+                                                <img className={i === 1 || i === 2 || i === 5 ? "h-[220px] mx-auto" : "h-[180px] mx-auto "} src={val.url} alt="" />
+                                            </div>
+                                            <div className={`mx-auto text-2xl pt-16`}>{val.label}</div>
                                         </div>
-                                        <div className={`mx-auto text-2xl ${i === 1 || i === 2 || i === 5 ? "mt-[4.5rem]" : "mt-[3rem]"}`}>{val.label}</div>
-                                    </div>
-                                </a>
-                            </div>
-                        )
-                    })}
+                                    </a>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
 
             </div>

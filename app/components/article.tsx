@@ -43,11 +43,11 @@ const Article = (props: ArticleComponentProps) => {
     }, [carouselIndex]);
 
     return (
-        <div className="relative object-cover">
+        <div className="relative">
             <div className="absolute py-4 px-6 z-[10] text-3xl text-white rounded-br-2xl rounded-tl-2xl font-helvethaica-bd bg-[#00338d]">
                 บทความทางการแพทย์
             </div>
-            <div className="absolute z-[10] bottom-0 ivd-comtomer rounded-b-2xl">
+            {/* <div className="absolute z-[10] bottom-0 ivd-comtomer rounded-b-2xl">
                 <div className="pb-8 px-5">
                     <div className="flex gap-2 text-[1.2rem]">
                         <div className="text-[#00338d] backdrop-blur-sm bg-white/70 rounded-l-xl rounded-r-xl px-3 font-helvethaica">Care</div>
@@ -61,10 +61,10 @@ const Article = (props: ArticleComponentProps) => {
                         ปัญหาของคุณตั้งแต่ระยะเริ่มแรก เพื่อให้คุณฟื้นคุณภาพชีวิตได้ทันที
                     </div>
 
-                    <div className="grid-apw gap-4 py-8 text-white font-helvethaica">
+                    <div className="gap-4 py-8 text-white font-helvethaica">
                         <div className="flex align-center">
-                            {/* {currentItem.avatarURL} */}
-                            <img className="w-14 h-14 rounded-full object-cover" src={currentItem.avatarURL} alt="" />
+                            {currentItem.avatarURL}
+                            <img className="w-full h-auto rounded-full max-w-[10rem]" src={currentItem.avatarURL} alt="" />
                         </div>
                         <div className="grid grid-rows-2 grid-flow-col align-center">
                             <div className="text-2xl">{currentItem.avatarName}</div>
@@ -77,9 +77,6 @@ const Article = (props: ArticleComponentProps) => {
 
                     <div className="col-1">
                         <div className="grid grid-cols-3 gap-5">
-
-                            {/* console log */}
-                            {/* {i}{item}{collections} */}
 
                             {items.map((val, index) => {
                                 const i = index;
@@ -96,10 +93,10 @@ const Article = (props: ArticleComponentProps) => {
                     </div>
                 </div>
 
-            </div>
+            </div> */}
 
-            <div className="relative w-full h-2/3">
-                <img className="block w-full object-cover rounded-2xl h-[600px] brightness-75" src={currentItem.carouselURL} alt="" />
+            <div className="">
+                <img className=" w-full h-auto max-w-[50rem]" src={currentItem.carouselURL} alt="" />
             </div>
 
         </div >
