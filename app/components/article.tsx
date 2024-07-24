@@ -44,10 +44,10 @@ const Article = (props: ArticleComponentProps) => {
 
     return (
         <div className="relative">
-            <div className="absolute py-4 px-6 z-[10] text-3xl text-white rounded-br-2xl rounded-tl-2xl font-helvethaica-bd bg-[#00338d]">
+            {/* <div className="absolute py-4 px-6 z-[10] text-3xl text-white rounded-br-2xl rounded-tl-2xl font-helvethaica-bd bg-[#00338d]">
                 บทความทางการแพทย์
             </div>
-            {/* <div className="absolute z-[10] bottom-0 ivd-comtomer rounded-b-2xl">
+            <div className="absolute z-[10] bottom-0 ivd-comtomer rounded-b-2xl">
                 <div className="pb-8 px-5">
                     <div className="flex gap-2 text-[1.2rem]">
                         <div className="text-[#00338d] backdrop-blur-sm bg-white/70 rounded-l-xl rounded-r-xl px-3 font-helvethaica">Care</div>
@@ -63,7 +63,6 @@ const Article = (props: ArticleComponentProps) => {
 
                     <div className="gap-4 py-8 text-white font-helvethaica">
                         <div className="flex align-center">
-                            {currentItem.avatarURL}
                             <img className="w-full h-auto rounded-full max-w-[10rem]" src={currentItem.avatarURL} alt="" />
                         </div>
                         <div className="grid grid-rows-2 grid-flow-col align-center">
@@ -96,7 +95,7 @@ const Article = (props: ArticleComponentProps) => {
             </div> */}
 
             <div className="">
-                <img className=" w-full h-auto max-w-[50rem]" src={currentItem.carouselURL} alt="" />
+                <img className="w-auto h-full object-cover rounded-2xl" src={currentItem.carouselURL} alt="" />
             </div>
 
         </div >

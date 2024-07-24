@@ -186,14 +186,24 @@ nav {
 }
 
 .card-health {
-  height: 10rem;
+  height: 330px;
   width: 100%;
 }
 
-.card-health:nth-child(2),
+.health .card-health:nth-child(2),
 .card-health:nth-child(3),
 .card-health:nth-child(6) {
-  height: 20rem;
+  height: 470px;
+}
+
+@media (max-width:768px) {
+  .health {
+    width:100%;
+    columns: 1;
+  }
+  .health .card-health {
+    height:200px;
+  }
 }
 
 /* end of css health program */

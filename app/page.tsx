@@ -288,7 +288,7 @@ export default function Home() {
         {/* start article content */}
 
         <div className="bg-white">
-          <div className="mx-auto px-6 py-6 max-w-screen-xl w-full">
+          <div className="mx-auto px-6 py-6  w-full">
             <div className="flex flex-col gap-12">
               <div className="font-helvethaica-bd text-[3.5rem]">บทความเกี่ยวกับสุขภาพ</div>
               <div className="grid sm:grid-cols-2">
