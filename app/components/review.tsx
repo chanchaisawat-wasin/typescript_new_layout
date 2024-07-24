@@ -16,14 +16,12 @@ const Review = (props: ReviewComponentProps) => {
 
     return (
         <div className="bg-[#F7F9FC]">
-            <div className="max-w-screen-xl w-full px-6 py-6">
+            <div className="max-w-screen-xl w-full px-6 py-6 mx-auto relative">
 
                 {/* circle */}
-                <div className="absolute left-[50%] circle-1">
-                        <div className="circle-2"></div>
-                        <div className="circle-3"></div>
-                        <div className="circle-4"></div>
-                    </div>
+                <div className="border absolute w-[55rem] h-[55rem]">
+                    <div className="mx-auto border w-[45rem] h-[45rem]"></div>
+                </div>
 
                 <div className="min-h-[55rem] relative w-full flex justify-center items-center">
 
