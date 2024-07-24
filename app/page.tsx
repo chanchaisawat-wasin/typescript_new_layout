@@ -5,6 +5,7 @@ import Vision from './components/vision';
 import Award from './components/award';
 import Recommend from './components/recommend';
 import Health from './components/health';
+import Review from './components/review';
 import Article from './components/article';
 import Footer from "./components/footer";
 
@@ -282,18 +283,54 @@ export default function Home() {
         {/* end of health program */}
 
         {/* start review content */}
+        
+        <Review
+        title="รีวิวจากลูกค้า"
+        items={[
+          {
+            label:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            name:"Chanathinad Satanon",
+            imgURL:"https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_home_9_9fd2385562/thumbnail_update_home_9_9fd2385562.png",
+            package:"Package For Mom",
+          },
+          {
+            label:"Lorem Ipsum in simply dummy text of the printing and typesetting industry.",
+            name:"Chanathinad Satanon",
+            imgURL:"https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_home_9_9fd2385562/thumbnail_update_home_9_9fd2385562.png",
+            package:"Package For Mom",
+          },
+          {
+            label:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            name:"Chanathinad Satanon",
+            imgURL:"https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_home_9_9fd2385562/thumbnail_update_home_9_9fd2385562.png",
+            package:"Package For Mom",
+          },
+          {
+            label:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            name:"Chanathinad Satanon",
+            imgURL:"https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_home_9_9fd2385562/thumbnail_update_home_9_9fd2385562.png",
+            package:"Package For Mom",
+          },
+          {
+            label:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            name:"Chanathinad Satanon",
+            imgURL:"https://storage.googleapis.com/nh-uat-corp/2024/6/thumbnail_update_home_9_9fd2385562/thumbnail_update_home_9_9fd2385562.png",
+            package:"Package For Mom",
+          }
+        ]}/>
 
         {/* end of review content */}
 
         {/* start article content */}
 
         <div className="bg-white">
-          <div className="mx-auto px-6 py-6  w-full">
+          <div className="mx-auto px-6 py-6 max-w-screen-xl w-full">
             <div className="flex flex-col gap-12">
               <div className="font-helvethaica-bd text-[3.5rem]">บทความเกี่ยวกับสุขภาพ</div>
-              <div className="grid sm:grid-cols-2">
+              <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <Article
+                    title="บทความทางการแพทย์"
                     items={
                       [
                         {
@@ -319,6 +356,7 @@ export default function Home() {
                 </div>
                 <div>
                   <Article
+                      title="ทั่วไป"
                     items={[
                       {
                         "carouselURL": "https://storage.googleapis.com/nh-uat-corp/2024/6/update_team_medical_personal_f8503fb116/update_team_medical_personal_f8503fb116.png",

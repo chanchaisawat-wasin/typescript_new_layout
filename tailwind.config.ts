@@ -12,7 +12,7 @@ const config: Config = {
       },
     },
     screen: {
-      'mxl': '1440px',
+      '2xl': '1440px',
     }
   },
   plugins: [],
