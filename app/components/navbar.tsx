@@ -65,7 +65,7 @@ const Navbar = (props: NavbarComponentProps) => {
     }
 
     return (
-        <div className="mx-auto py-2 max-w-screen-xl w-full">
+        <div className="mx-auto px-6 py-6 max-w-screen-xl w-full">
             <nav
                 /* default screen */
                 className="">
@@ -90,7 +90,7 @@ const Navbar = (props: NavbarComponentProps) => {
                 {/* <div className={`${toggle ? 'open-nav' : ''}mt-[1.5rem]`}> */}
                 <div
                     /* default screen */
-                    className={`flex min-[1441px]:pb-[0.5rem] lg:pb-[0.2rem] backdrop-blur-sm bg-white/70 pt-[0.4rem] pr-[1.4rem] pl-[1.4rem] mid-nav min-[1441px]:mt-[1rem] lg:[0.8rem] min-[1441px]:gap-[2rem] lg:gap-[1.5rem] rounded-r-full rounded-l-full ${toggle ? 'nav-show' : ''} `}>
+                    className={`z-10 flex backdrop-blur-sm bg-white/70 mid-nav  lg:gap-[1.5rem] rounded-r-full rounded-l-full ${toggle ? 'nav-show' : ''} `}>
                     {items.map((val, i) => {
                         return (
                             <div className={`${i === 4 ? "dropdown" : ""}`}>
@@ -116,7 +116,7 @@ const Navbar = (props: NavbarComponentProps) => {
                     })}
                 </div>
 
-                <div className={`lg:flex hidden backdrop-blur-sm bg-white/70 rounded-full`}>
+                <div className={`z-10 lg:flex hidden backdrop-blur-sm bg-white/70 rounded-full`}>
                     {language.map((val, i) => {
                         return (
                             <div className={`font-helvethaica-bd gap-2 ${i > 0 ? "hidden" : "flex"}`}>{val.label}{i === 0 ? dropIcon() : ""}</div>

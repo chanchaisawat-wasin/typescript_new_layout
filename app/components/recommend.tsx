@@ -40,7 +40,7 @@ const Recommend = (props: RecommendComponentProps) => {
                     {items.map((val, i) => {
                         return (<div className="grid sm:grid-cols-3 grid-cols-1 gap-[2.2rem]">
                             {val.image?.map((val, i) => {
-                                return (<div className={`${i === 0 ? "col-span-2" : "col-1"} relative`}>
+                                return (<div className={`${i === 0 ? "sm:col-span-2" : "sm:col-1"} relative`}>
                                     <img className="object-cover h-full w-full rounded-2xl" src={val.url} alt="" />
                                     <div className="z-[2] absolute object-cover bottom-0 h-[25%] w-full img-gradient rounded-b-2xl">
                                         <div className="z-[2] absolute bottom-[1.8rem] left-[1.5rem] font-helvethaica-bd text-[50px] text-white">{val.label}</div>

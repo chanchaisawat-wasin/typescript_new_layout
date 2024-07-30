@@ -151,9 +151,28 @@ nav {
   background-size: auto;
 }
 
-.vision-card {
-  display: flex;
-  overflow-x: auto;
+.bg-card {
+  background-color: white;
+}
+
+/* .visionGradient {
+  bacg
+} */
+
+.imgVision {
+  display: none;
+}
+
+.bg-card:hover .imgVision {
+  display: block;
+}
+
+.text:hover {
+  background: linear-gradient(to bottom,rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.5));
+}
+
+.bg-card:hover {
+  color: white;
 }
 
 /* end of css vision */
@@ -165,7 +184,7 @@ nav {
   justify-content: space-between;
   overflow: auto;
   align-items: center;
-  flex: 1 1 0%;
+  flex: 1 0 0%;
 }
 
 /* end of css award */
@@ -186,23 +205,24 @@ nav {
 }
 
 .card-health {
-  height: 330px;
+  height: 230px;
   width: 100%;
 }
 
 .health .card-health:nth-child(2),
 .card-health:nth-child(3),
 .card-health:nth-child(6) {
-  height: 470px;
+  height: 370px;
 }
 
 @media (max-width:768px) {
   .health {
-    width:100%;
+    width: 100%;
     columns: 1;
   }
+
   .health .card-health {
-    height:200px;
+    height: 200px;
   }
 }
 
@@ -214,7 +234,7 @@ nav {
 .circle-1 {
   min-width: 45rem;
   min-height: 45rem;
-  border: 1px solid rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 9999px;
   /* transform: translate(-50% -50%); */
 }
@@ -223,7 +243,7 @@ nav {
   position: absolute;
   width: 30rem;
   height: 30rem;
-  border: 1px solid rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 100%;
 }
 
@@ -231,7 +251,7 @@ nav {
   position: absolute;
   width: 20rem;
   height: 20rem;
-  border: 1px solid rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 100%;
 }
 
@@ -239,8 +259,8 @@ nav {
   position: absolute;
   width: 10rem;
   height: 10rem;
-  border: 1px solid rgba(0, 0, 0, 0.9);
-  border-radius:100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 100%;
 }
 
 /* end of css Review */
