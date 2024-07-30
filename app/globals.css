@@ -210,26 +210,27 @@ nav {
 
 /* start css Review */
 
+/* circle */
 .circle-1 {
-  position: absolute;
-  min-width: 55rem;
-  min-height: 55rem;
+  min-width: 45rem;
+  min-height: 45rem;
   border: 1px solid rgba(0, 0, 0, 0.9);
   border-radius: 9999px;
+  /* transform: translate(-50% -50%); */
 }
 
 .circle-2 {
   position: absolute;
-  width: 40rem;
-  height: 40rem;
+  width: 30rem;
+  height: 30rem;
   border: 1px solid rgba(0, 0, 0, 0.9);
   border-radius: 100%;
 }
 
 .circle-3 {
   position: absolute;
-  width: 25rem;
-  height: 25rem;
+  width: 20rem;
+  height: 20rem;
   border: 1px solid rgba(0, 0, 0, 0.9);
   border-radius: 100%;
 }
