@@ -20,7 +20,7 @@ const Award = (props: AwardComponentProps) => {
   return (
     <div className="mx-auto px-6 py-6 max-w-screen-xl w-full">
       <div className="flex sm:flex-row flex-col items-center gap-[1.5rem] overflow-hidden">
-        <div className="py-[2rem] pr-[2rem] sm:border-r-[1px] w-64">
+        <div className="flex justify-center items-center py-[2rem] pr-[2rem] sm:border-r-[1px] w-64">
           {label.map((val, i) => {
             return (
               <p className="font-helvethaica-bd text-[24px] text-[#A3A7AD]">

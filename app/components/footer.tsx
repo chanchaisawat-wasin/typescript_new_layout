@@ -17,7 +17,7 @@ const Footer = (props: FooterComponentProps) => {
 
     return (
         <div className="bg-[#00338d]">
-            <div className="mx-auto px-6 py-6 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm-max-w-screen-sm w-full">
+            <div className="mx-auto px-6 py-6 xl:max-w-screen-xl w-full">
                 {/* <div className="px-12 pb-6 pt-12"> 
                     <div className="px-4 pt-6"> */}
                         <div className='flex flex-col gap-12'>

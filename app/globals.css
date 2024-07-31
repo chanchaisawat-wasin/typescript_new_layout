@@ -124,7 +124,11 @@ nav {
 
 .dropdown-menu {
   display: none;
+  top:2.5rem;
   position: absolute;
+  line-height: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .dropdown-menu a {
@@ -141,6 +145,74 @@ nav {
 
 /* start css for paragram */
 
+.spin-1 {
+  animation-name: spin-y-1;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.spin-2 {
+  animation-name: spin-y-2;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width:768px) {
+  .spin-1 {
+    animation-name: spin-x-1;
+  }
+
+  .spin-2 {
+    animation-name: spin-x-2;
+  }
+}
+
+@keyframes spin-y-1 {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-220%);
+  }
+}
+
+@keyframes spin-y-2 {
+  0% {
+    transform: translateY(-220%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes spin-x-1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-180%);
+  }
+}
+
+@keyframes spin-x-2 {
+  0% {
+    transform: translateX(-180%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.bg-modal {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mh {
+  max-height: calc(-7rem + 95vh)
+}
 
 /* end css for paragram */
 
@@ -168,7 +240,7 @@ nav {
 }
 
 .text:hover {
-  background: linear-gradient(to bottom,rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.5));
+  background: linear-gradient(to bottom, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.5));
 }
 
 .bg-card:hover {

@@ -94,9 +94,45 @@ export default function Home() {
                 },
                 {
                   url:"https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_5_2_cbcd3b1f94/webp_update_home_first_section_5_2_cbcd3b1f94.webp"
-                }
+                },
+                {
+                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_1_2_72b1fa0a34/webp_update_home_first_section_1_2_72b1fa0a34.webp"
+                },
+                {
+                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_3_2_9eb35a242c/webp_update_home_first_section_3_2_9eb35a242c.webp"
+                },
+                {
+                  url:"https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_5_2_cbcd3b1f94/webp_update_home_first_section_5_2_cbcd3b1f94.webp"
+                },
+                {
+                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_1_2_72b1fa0a34/webp_update_home_first_section_1_2_72b1fa0a34.webp"
+                },
+                {
+                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_3_2_9eb35a242c/webp_update_home_first_section_3_2_9eb35a242c.webp"
+                },
+                {
+                  url:"https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_5_2_cbcd3b1f94/webp_update_home_first_section_5_2_cbcd3b1f94.webp"
+                },
               ],
               img2: [
+                {
+                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_2_2_c2588ea54b/webp_update_home_first_section_2_2_c2588ea54b.webp"
+                },
+                {
+                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_4_2_99b5ec286b/webp_update_home_first_section_4_2_99b5ec286b.webp"
+                },
+                {
+                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_6_2_93dd36630b/webp_update_home_first_section_6_2_93dd36630b.webp"
+                },
+                {
+                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_2_2_c2588ea54b/webp_update_home_first_section_2_2_c2588ea54b.webp"
+                },
+                {
+                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_4_2_99b5ec286b/webp_update_home_first_section_4_2_99b5ec286b.webp"
+                },
+                {
+                  url: "https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_6_2_93dd36630b/webp_update_home_first_section_6_2_93dd36630b.webp"
+                },
                 {
                   url: "https://storage.googleapis.com/nh-uat-corp/2024/6/webp_update_home_first_section_2_2_c2588ea54b/webp_update_home_first_section_2_2_c2588ea54b.webp"
                 },

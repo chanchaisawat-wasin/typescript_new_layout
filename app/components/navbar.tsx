@@ -37,9 +37,14 @@ type NavbarComponentProps = {
 const Navbar = (props: NavbarComponentProps) => {
 
     const [toggle, setToggle] = useState(false);
+    const [lang, setLang] = useState(false)
 
     const handleToggle = () => {
         setToggle(!toggle);
+    }
+
+    const handleLang = () => {
+        setLang(!lang)
     }
 
     const img = props.img ?? [];
@@ -87,42 +92,44 @@ const Navbar = (props: NavbarComponentProps) => {
                     </div>
                 </div>
 
-                {/* <div className={`${toggle ? 'open-nav' : ''}mt-[1.5rem]`}> */}
                 <div
                     /* default screen */
-                    className={`z-10 flex backdrop-blur-sm bg-white/70 mid-nav  lg:gap-[1.5rem] rounded-r-full rounded-l-full ${toggle ? 'nav-show' : ''} `}>
+                    className={`z-10 flex backdrop-blur-sm bg-white/70 mid-nav px-4 lg:gap-[1.5rem] rounded-r-full rounded-l-full ${toggle ? 'nav-show' : ''} `}>
                     {items.map((val, i) => {
                         return (
                             <div className={`${i === 4 ? "dropdown" : ""}`}>
-                                {/* <div className=""> */}
+
                                 <a className="" href={val.url}>
-                                    <div className={`font-helvethaica-bd hover:text-[#00338d] flex ${i === 4 ? "gap-[0.2rem]" : ""}`}>{val.label}
-                                        <div className="drop-icon">{i === 4 ? dropIcon() : ""}</div>
+                                    <div className={`font-helvethaica-bd hover:text-[#00338d] py-2 flex ${i === 4 ? "gap-[0.2rem]" : ""}`}>{val.label}
+                                        {i === 4 ? <div className="drop-icon h-4 w-4"> {dropIcon()}</div> : ""}
                                     </div>
-                                </a>
-                                {/* </div> */}
-                                <div className="">
-                                    <div className={i === 4 ? "dropdown-menu backdrop-blur-sm bg-white/70 py-[0.5rem] px-[2rem] rounded-3xl" : ""}>
+                                    <div className={i === 4 ? "dropdown-menu backdrop-blur-sm bg-white/70 rounded-xl" : ""}>
                                         {val.children?.map((val, i) => {
                                             return (
                                                 <a href={val.url}><div className="font-helvethaica hover:text-[#00338d] py-[0.5rem]">{val.label}</div></a>
                                             )
                                         })}
                                     </div>
-                                </div>
+                                </a>
+
                             </div>
 
                         )
                     })}
                 </div>
 
-                <div className={`z-10 lg:flex hidden backdrop-blur-sm bg-white/70 rounded-full`}>
-                    {language.map((val, i) => {
-                        return (
-                            <div className={`font-helvethaica-bd gap-2 ${i > 0 ? "hidden" : "flex"}`}>{val.label}{i === 0 ? dropIcon() : ""}</div>
-                        )
-                    })}
+                <div className={`z-10 lg:flex px-4 hidden backdrop-blur-sm bg-white/70 rounded-full`}>
+
+                    <div className={`font-helvethaica-bd py-2 gap-2 flex`}>
+                        <div>
+                            TH
+                        </div>
+                        <div className="h-4 w-4">
+                            {dropIcon()}
+                        </div>
+                    </div>
                 </div>
+                
                 {/* </div> */}
 
 
