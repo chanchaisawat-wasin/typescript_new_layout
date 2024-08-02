@@ -37,14 +37,10 @@ const Paragram = (props: ParagramComponentProps) => {
                                             <div className="font-helvethaica-bd text-3xl">
                                                 รายละเอียด
                                             </div>
-
-
-
                                         </div>
                                         {items.map((val, i) => {
                                             return (
                                                 <>
-                                                    {val.label}
                                                     {val.label}
                                                 </>
                                             )

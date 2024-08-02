@@ -3,7 +3,20 @@ import React, { useEffect, useState } from 'react';
 import '../globals.css';
 
 type ArticleComponentProps = {
-    title?: string;
+    title?: {
+        title?:string;
+    }[]
+    card?: {
+        label?:string;
+    }[]
+    label?: {
+        title?:{
+            title?:string;
+        }[]
+        label?:{
+            label?:string;
+        }[]
+    }[]
     items?: {
         carouselURL?: string;
         avatarURL?: string;
@@ -13,10 +26,13 @@ type ArticleComponentProps = {
 }
 
 const Article = (props: ArticleComponentProps) => {
+    console.log(props)
 
     const [carouselIndex, setCarouselIndex] = useState<number>(0);
     const title = props.title ?? [];
     const items = props.items ?? [];
+    const card = props.card ?? [];
+    const label = props.label ?? [];
     const currentItem = items[carouselIndex];
     const handleCarousel = (e: number) => {
         setCarouselIndex(e);
@@ -37,7 +53,6 @@ const Article = (props: ArticleComponentProps) => {
 
         }, 8000)
 
-
         return () => {
             ///
             clearTimeout(to)
@@ -48,21 +63,45 @@ const Article = (props: ArticleComponentProps) => {
         <div className="relative rounded-2xl overflow-hidden text-white">
             <div className="">
                 <div className="absolute py-2 px-6 z-[10] min-[1440px]:text-3xl xl:text-2xl leading-tight rounded-br-2xl font-helvethaica-bd bg-[#00338d]">
-                    {title}
+                    {title.map((val,i) => {
+                        return(<>{val.title}</>)
+                    })}
                 </div>
                 <div className="absolute z-[5] bottom-0 ivd-comtomer rounded-b-2xl">
                     <div className="mb-8 px-5 flex flex-col min-[1440px]:gap-6 gap-2">
                         <div className="flex gap-2 min-[1440px]:text-[1.2rem] text-[0.8rem]">
-                            <div className="text-[#00338d] backdrop-blur-sm bg-white/70 rounded-l-full rounded-r-full px-3 font-helvethaica">Care</div>
-                            <div className="text-[#00338d] backdrop-blur-sm bg-white/70 rounded-l-full rounded-r-full px-3 font-helvethaica">General</div>
+                            {card.map((val,i)=> {
+                                return (
+                            <div className="text-[#00338d] backdrop-blur-sm bg-white/70 rounded-l-full rounded-r-full px-3 font-helvethaica">{val.label}</div>
+                                )
+                            })}
+                            {/* <div className="text-[#00338d] backdrop-blur-sm bg-white/70 rounded-l-full rounded-r-full px-3 font-helvethaica">Care</div> */}
+                            {/* <div className="text-[#00338d] backdrop-blur-sm bg-white/70 rounded-l-full rounded-r-full px-3 font-helvethaica">General</div> */}
                         </div>
                         <div className="flex flex-col">
                             <div className="min-[1440px]:text-[2rem] text-[1.3rem] font-helvethaica-bd">
-                                สิ่งที่คุณควรรู้ก่อนการส่องกล้องช่องท้องส่วนบน
+                                {label.map((val,i) => {
+                                    return (
+                                        <>{val.title?.map((val,i) => {
+                                            return(
+                                                <>{val.title}</>
+                                            )
+                                        })}</>
+                                    )
+                                })}
                             </div>
                             <div className="min-[1440px]:text-[1.5rem] text-[1rem] leading-tight opacity-75 font-helvethaica line-clamp-3">
-                                หากคุณมีอาการปวดท้องส่วนบนอย่างต่อเนื่องตลอดจนความผิดปกติอื่น ๆ ในระบบทางเดินอาหาร คุณจะต้องเข้ารับการตรวจส่องกล้องส่วนบนเพื่อพิจารณา ประเมิน และรักษา
-                                ปัญหาของคุณตั้งแต่ระยะเริ่มแรก เพื่อให้คุณฟื้นคุณภาพชีวิตได้ทันที
+                                {label.map((val,i)=> {
+                                    return(
+                                        <>
+                                        {val.label?.map((val,i) => {
+                                            return(
+                                                <>{val.label}</>
+                                            )
+                                        })}
+                                        </>
+                                    )
+                                })}
                             </div>
                         </div>
 

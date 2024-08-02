@@ -2,29 +2,33 @@ import React from 'react'
 
 type AwardComponentProps = {
 
-  label?: {
-    label?: string;
-  }[]
-
-  items?: {
-    imgURL?: string
+  award?: {
+    label?: {
+      label?: string;
+    }[]
+    items?: {
+      imgURL?: string
+    }[]
   }[]
 
 }
 
 const Award = (props: AwardComponentProps) => {
 
-  const label = props.label ?? [];
-  const items = props.items ?? [];
+  const items = props.award ?? [];
 
   return (
     <div className="mx-auto px-6 py-6 max-w-screen-xl w-full">
       <div className="flex sm:flex-row flex-col items-center gap-[1.5rem] overflow-hidden">
         <div className="flex justify-center items-center py-[2rem] pr-[2rem] sm:border-r-[1px] w-64">
-          {label.map((val, i) => {
+          {items.map((val, i) => {
             return (
               <p className="font-helvethaica-bd text-[24px] text-[#A3A7AD]">
-                {val.label}
+                {val.label?.map((val,i) => {
+                  return (
+                    <>{val.label}</>
+                  )
+                })}
               </p>
             )
           })}</div>
@@ -32,7 +36,11 @@ const Award = (props: AwardComponentProps) => {
           {items.map((val, i) => {
             return (
               <>
-                <img className="object-cover grayscale hover:grayscale-0 w-auto h-16" src={val.imgURL} alt="" />
+                {val.items?.map((val, i) => {
+                  return (
+                    <img className="object-cover grayscale hover:grayscale-0 w-auto h-16" src={val.imgURL} alt="" />
+                  )
+                })}
               </>
             )
           })}

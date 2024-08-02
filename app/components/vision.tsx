@@ -3,9 +3,7 @@ import React, { ReactElement } from 'react'
 type VisionComponentProps = {
     label?: {
         title?: string;
-        children?: {
-            label?: string | ReactElement;
-        }[]
+        label: string | ReactElement | TrustedHTML;
     }[]
     items?: {
         cardIcon?: string;
@@ -30,13 +28,11 @@ const Vision = (props: VisionComponentProps) => {
                         {label.map((val, i) => {
                             return (<>
                                 <div className=" text-[#00338d] text-xl">{val.title}</div>
-                                {val.children?.map((val, i) => {
-                                    return (
-                                        <div className="text-3xl leading-relaxed">
-                                            {val.label}
-                                        </div>
-                                    )
-                                })}
+
+                                <div className="text-3xl leading-relaxed">
+                                    <div dangerouslySetInnerHTML={{ __html: val.label }} />
+                                </div>
+
                             </>
                             )
                         })}
