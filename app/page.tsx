@@ -1,53 +1,20 @@
-'use client'
-import Navbar from './components/navbar';
-import Paragram from './components/paragram';
-import Vision from './components/vision';
 import Award from './components/award';
-import Recommend from './components/recommend';
+import Footer from './components/footer';
 import Health from './components/health';
+import Navbar from './components/navbar';
+import axios from 'axios';
+import Paragram from './components/paragram';
+import Recommend from './components/recommend';
 import Review from './components/review';
-import Article from './components/article';
-import Footer from "./components/footer";
-import React, { ReactElement, useEffect, useState, useCallback } from 'react'
-import axios, { AxiosResponse } from 'axios';
+import Vision from './components/vision';
 
-export default function Home() {
+export default async function Home() {
 
-  const [navImg, setNavImg] = useState([]);
-  const [navItems, setNavItems] = useState([]);
-  const [NavLanguage, setNavLanguage] = useState([]);
-
-  const [paragram, setParagram] = useState([]);
-  const [visionLabel, setVisionLabel] = useState([]);
-  const [visionItems, setVisionItems] = useState([]);
-  const [award, setAward] = useState([]);
-  const [recommend, setRecommend] = useState([]);
-
-  const [healthItems, setHealthItems] = useState([]);
-  const [healthCard, setHealthCard] = useState([]);
-  const [healthLabel, setHealthLabel] = useState([]);
-
-  const [reviewTitle, setReviewTitle] = useState([]);
-  const [reviewItems, setReviewItems] = useState([]);
-
-  const [artCard1, setArtCard1] = useState([]);
-  const [artTitle1, setArtTitle1] = useState([]);
-  const [artLabel1, setArtLabel1] = useState([]);
-  const [artItems1, setArtItems1] = useState([]);
-
-  const [articleTitle_2, setArticleTitle_2] = useState([]);
-  const [articleItems_2, setArticleItems_2] = useState([]);
-  const [articleCard_2, setArticleCard_2] = useState([]);
-  const [articleLabel_2, setArticleLabel_2] = useState([]);
-
-  const [footer, setFooter] = useState([]);
 
   const fetchNav = async () => {
     try {
       const response = await axios.get("http://localhost:5000/nav");
-      setNavImg(response.data.nav.img);
-      setNavItems(response.data.nav.items);
-      setNavLanguage(response.data.nav.language);
+      return response.data
     } catch (error) {
       console.error("Error fetching data:", error)
     }
@@ -56,7 +23,7 @@ export default function Home() {
   const fetchParagram = async () => {
     try {
       const response = await axios.get("http://localhost:5000/paragram");
-      setParagram(response.data.paragram);
+      return response.data
     } catch (error) {
       console.error("Error fetching data:", error)
     }
@@ -65,8 +32,8 @@ export default function Home() {
   const fetchVision = async () => {
     try {
       const response = await axios.get("http://localhost:5000/vision");
-      setVisionItems(response.data.vision.items);
-      setVisionLabel(response.data.vision.label);
+      return response.data
+
       // console.log(response.data.vision);
     } catch (error) {
       console.error("Error fetching data:", error)
@@ -76,8 +43,8 @@ export default function Home() {
   const fetchAward = async () => {
     try {
       const response = await axios.get("http://localhost:5000/award");
-      setAward(response.data.award);
-      // console.log(response.data.award);
+      return response.data
+
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -86,8 +53,8 @@ export default function Home() {
   const fetchRecommend = async () => {
     try {
       const response = await axios.get("http://localhost:5000/recommend");
-      setRecommend(response.data.recommend);
-      // console.log(response.data.recommend);
+      return response.data
+
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -96,9 +63,8 @@ export default function Home() {
   const fetchHealth = async () => {
     try {
       const response = await axios.get("http://localhost:5000/health");
-      setHealthCard(response.data.health.card);
-      setHealthItems(response.data.health.items);
-      setHealthLabel(response.data.health.label)
+      return response.data
+
     } catch (error) {
       console.error("Error fetching data:", error)
     }
@@ -107,46 +73,66 @@ export default function Home() {
   const fetchReview = async () => {
     try {
       const response = await axios.get("http://localhost:5000/review");
-      setReviewItems(response.data.review.items);
-      setReviewTitle(response.data.review.title);
-      // console.log(response.data.review.items)
+      return response.data
+
     } catch (error) {
       console.error("Error fetching data:", error)
     }
   }
 
-  const fetchArticle1 = useCallback(async () => {
+  const fetchArticle1 = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/article1");
+      return response.data
 
-    const res = await axios.get("http://localhost:5000/article1");
-    setArtCard1(res.data.article1.card);
-    setArtItems1(res.data.article1.items);
-    setArtLabel1(res.data.article1.label);
-    setArtTitle1(res.data.article1.title);
-    console.log(res.data.article1.card)
-  }, []);
+    } catch (error) {
+      console.error("Error fetching data:", error)
+    }
+ 
+
+  };
+
+  // const fetchArt2 = async () => {
+  //   const res = await axios.get("http://localhost:5000/article2");
+  //   setArtCard2(res.data.article2.card);
+  //   setArtItems2(res.data.article2.items);
+  //   setArtLab2(res.data.article2.label);
+  //   setArtTitle2(res.data.article2.title);
+  // },[];
 
   const fetchFooter = async () => {
     try {
       const response = await axios.get("http://localhost:5000/footer");
-      setFooter(response.data.items);
-      // console.log(response.data)
+      return response.data
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
+  
+  const navData =  await fetchNav()
+  const paragramData =  await fetchParagram()
+  const visionData =  await fetchVision()
+  const awardData =  await fetchAward()
+  const recData =  await fetchRecommend()
+  const hData =  await fetchHealth()
+  const rvData =  await fetchReview()
+  const article1Data =  await fetchArticle1()
+  const footerData =  await fetchFooter()
 
-  useEffect(() => {
-    fetchNav();
-    fetchParagram();
-    fetchVision();
-    fetchAward();
-    fetchRecommend();
-    fetchHealth();
-    fetchReview();
-    fetchArticle1();
-    fetchFooter();
-  }, [])
-
+  const navImg = navData?.nav?.img;
+  const navItems = navData?.nav?.items;
+  const NavLanguage =  navData?.nav?.language;
+  const paragram = paragramData?.paragram
+  const visionItems = visionData?.items;
+  const visionLabel = visionData?.label;
+  const award = awardData?.award;
+  const recommend = recData?.recommend;
+  const healthItems = hData?.health?.items;
+  const healthCard = hData?.health?.card;
+  const healthLabel = hData?.health?.label;
+  const reviewItems = rvData?.review?.items;
+  const reviewTitle =  rvData?.review?.item;
+  const footer = footerData?.items;
   return (
     <>
       {/* start navbar */}
@@ -193,7 +179,6 @@ export default function Home() {
         {/* end of recommend service content */}
 
         {/* start health program */}
-
         <Health
           items={healthItems}
           card={healthCard}
@@ -217,9 +202,7 @@ export default function Home() {
               <div className="font-helvethaica-bd text-[3.5rem]">บทความเกี่ยวกับสุขภาพ</div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  {artCard1.map((val,i) => {
-                    return(<>{val}</>)
-                  })}
+                  
                   {/* <Article
                     title={artTitle1}
                     items={artItems1}
