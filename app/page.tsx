@@ -119,12 +119,15 @@ export default async function Home() {
   const article1Data =  await fetchArticle1()
   const footerData =  await fetchFooter()
 
+  // console.log(visionData)
+  // console.log(awardData)
+
   const navImg = navData?.nav?.img;
   const navItems = navData?.nav?.items;
   const NavLanguage =  navData?.nav?.language;
   const paragram = paragramData?.paragram
-  const visionItems = visionData?.items;
-  const visionLabel = visionData?.label;
+  const visionItems = visionData?.vision?.items;
+  const visionLabel = visionData?.vision?.label;
   const award = awardData?.award;
   const recommend = recData?.recommend;
   const healthItems = hData?.health?.items;
@@ -133,6 +136,8 @@ export default async function Home() {
   const reviewItems = rvData?.review?.items;
   const reviewTitle =  rvData?.review?.item;
   const footer = footerData?.items;
+  // console.log(navImg)
+  // console.log(visionItems)
   return (
     <>
       {/* start navbar */}

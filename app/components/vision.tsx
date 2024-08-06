@@ -6,9 +6,9 @@ type VisionComponentProps = {
         label: string | ReactElement | TrustedHTML;
     }[]
     items?: {
-        cardIcon?: string;
-        imageHover?: string;
-        cardTitle?: string;
+        card_icon?: string;
+        image_hover?: string;
+        card_title?: string;
     }[]
 }
 
@@ -16,6 +16,8 @@ const Vision = (props: VisionComponentProps) => {
 
     const items = props.items ?? [];
     const label = props.label ?? [];
+
+    console.log(items)
 
     return (
         <div className="mx-auto px-6 py-6 relative max-w-screen-xl w-full">
@@ -43,11 +45,11 @@ const Vision = (props: VisionComponentProps) => {
                                 return (
                                     <div className={`bg-card relative w-40 flex flex-col gap-6 min-h-40 rounded-xl justify-between overflow-hidden h-auto border shadow`}>
                                         <div className="p-2">
-                                            <img className="h-auto w-16 " src={val.cardIcon} alt="" />
+                                            <img className="h-auto w-16 " src={val.card_icon} alt="" />
                                         </div>
-                                        <img className="absolute object-cover h-full w-auto imgVision" src={val.imageHover} alt="" />
+                                        <img className="absolute object-cover h-full w-auto imgVision" src={val.image_hover} alt="" />
                                         <div className="text-2xl p-2 z-[10] text">
-                                            {val.cardTitle}
+                                            {val.card_title}
                                         </div>
                                     </div>
                                 )
